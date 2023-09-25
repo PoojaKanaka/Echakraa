@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Chakraa\\Chakraa.csproj": {}
+    "C:\\Users\\ue\\Desktop\\Echakraa\\Chakraa\\Chakraa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Chakraa\\Chakraa.csproj": {
+    "C:\\Users\\ue\\Desktop\\Echakraa\\Chakraa\\Chakraa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Chakraa\\Chakraa.csproj",
+        "projectUniqueName": "C:\\Users\\ue\\Desktop\\Echakraa\\Chakraa\\Chakraa.csproj",
         "projectName": "Chakraa",
-        "projectPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Chakraa\\Chakraa.csproj",
-        "packagesPath": "C:\\Users\\kanaka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Chakraa\\obj\\",
+        "projectPath": "C:\\Users\\ue\\Desktop\\Echakraa\\Chakraa\\Chakraa.csproj",
+        "packagesPath": "C:\\Users\\ue\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ue\\Desktop\\Echakraa\\Chakraa\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kanaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ue\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
