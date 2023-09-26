@@ -9,9 +9,17 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BackendChakraa
 build_property.RootNamespace = BackendChakraa
+<<<<<<< HEAD
+build_property.ProjectDir = C:\Users\kanaka\Source\Repos\Echakraa\BackendChakraa\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\kanaka\Source\Repos\Echakraa\BackendChakraa
+=======
 build_property.ProjectDir = C:\Users\ue\Desktop\Echakraa\BackendChakraa\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\ue\Desktop\Echakraa\BackendChakraa
+>>>>>>> 947fadf21732aeaad507d3dad55ff1cb982bee6f
 build_property._RazorSourceGeneratorDebug = 

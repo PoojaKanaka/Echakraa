@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.v2
+/Chakraa/.vs/Chakraa/DesignTimeBuild/.dtbcache.v2
+*.1
+/Chakraa/obj/Debug/net6.0/Chakraa.assets.cache
+*.cache
+/Chakraa/obj/Debug/net6.0/Chakraa.GeneratedMSBuildEditorConfig.editorconfig
+/Chakraa/obj/Chakraa.csproj.nuget.dgspec.json
+/Chakraa/obj/Chakraa.csproj.nuget.g.props
+/Chakraa/obj/project.assets.json
+/Chakraa/obj/project.nuget.cache
+*.dbmdl
+*.jfm
+/Chakraa/.vs/Chakraa/FileContentIndex/16f47187-f545-467f-a5d3-6962dd75a71a.vsidx
+/Chakraa/.vs/Chakraa/FileContentIndex/4941ead5-b6fc-45fc-8561-a7e9a33c0e59.vsidx
+/Chakraa/.vs/Chakraa/FileContentIndex/56ef504c-1dba-42ff-9dfb-84fa71ff4a18.vsidx
+/Chakraa/.vs/Chakraa/v17/.suo

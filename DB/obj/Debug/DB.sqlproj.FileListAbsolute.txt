@@ -1,0 +1,10 @@
+C:\Users\kanaka\source\repos\Echakraa\DB\bin\Debug\DB.dacpac
+C:\Users\kanaka\source\repos\Echakraa\DB\bin\Debug\DB.dll
+C:\Users\kanaka\source\repos\Echakraa\DB\bin\Debug\DB.pdb
+C:\Users\kanaka\source\repos\Echakraa\DB\obj\Debug\DB.sqlproj.AssemblyReference.cache
+C:\Users\kanaka\source\repos\Echakraa\DB\obj\Debug\Model.xml
+C:\Users\kanaka\source\repos\Echakraa\DB\obj\Debug\refactor.xml
+C:\Users\kanaka\source\repos\Echakraa\DB\obj\Debug\postdeploy.sql
+C:\Users\kanaka\source\repos\Echakraa\DB\obj\Debug\predeploy.sql
+C:\Users\kanaka\source\repos\Echakraa\DB\obj\Debug\DB.dll
+C:\Users\kanaka\source\repos\Echakraa\DB\obj\Debug\DB.pdb

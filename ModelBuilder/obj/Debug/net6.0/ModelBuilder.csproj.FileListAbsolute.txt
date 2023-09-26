@@ -1,0 +1,15 @@
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\bin\Debug\net6.0\ModelBuilder.deps.json
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\bin\Debug\net6.0\ModelBuilder.dll
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\bin\Debug\net6.0\ModelBuilder.pdb
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\bin\Debug\net6.0\Data.dll
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\bin\Debug\net6.0\Data.pdb
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\ModelBuilder.csproj.AssemblyReference.cache
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\ModelBuilder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\ModelBuilder.AssemblyInfoInputs.cache
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\ModelBuilder.AssemblyInfo.cs
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\ModelBuilder.csproj.CoreCompileInputs.cache
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\ModelBuilder.csproj.CopyComplete
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\ModelBuilder.dll
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\refint\ModelBuilder.dll
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\ModelBuilder.pdb
+C:\Users\kanaka\source\repos\Echakraa\ModelBuilder\obj\Debug\net6.0\ref\ModelBuilder.dll
