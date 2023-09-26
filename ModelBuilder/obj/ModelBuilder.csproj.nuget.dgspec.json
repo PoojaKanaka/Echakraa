@@ -4,14 +4,14 @@
     "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\ModelBuilder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\ModelBuilder.csproj": {
+    "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\ModelBuilder.csproj",
-        "projectName": "ModelBuilder",
-        "projectPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\ModelBuilder.csproj",
+        "projectUniqueName": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Data\\Data.csproj",
+        "projectName": "Data",
+        "projectPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\kanaka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\obj\\",
+        "outputPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kanaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,93 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\ModelBuilder.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\ModelBuilder.csproj",
+        "projectName": "ModelBuilder",
+        "projectPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\ModelBuilder.csproj",
+        "packagesPath": "C:\\Users\\kanaka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kanaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Data\\Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
