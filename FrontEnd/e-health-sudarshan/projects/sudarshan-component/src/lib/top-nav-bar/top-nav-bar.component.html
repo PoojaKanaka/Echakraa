@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button *ngIf="!configuration?.hideMenuButton">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span> {{ configuration?.appName }} </span>
+  <mat-form-field
+    appearance="outline"
+    color="accent"
+    [subscriptSizing]="'dynamic'"
+    class="ms-4"
+  >
+    <mat-label>Toppings</mat-label>
+    <mat-select
+      [formControl]="configuration?.controlConfiguration?.formControl"
+    >
+      <mat-option
+        *ngFor="let topping of configuration?.controlConfiguration?.controlList"
+        [value]="topping"
+        >{{
+          topping[configuration?.controlConfiguration?.displayKey] | titlecase
+        }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <span class="top-nav-spacer"></span>
+</mat-toolbar>

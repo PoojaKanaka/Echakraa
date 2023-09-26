@@ -5,3 +5,5 @@
 export * from './lib/sudarshan-component.service';
 export * from './lib/sudarshan-component.component';
 export * from './lib/sudarshan-component.module';
+export * from './lib/top-nav-bar/public-api';
+export * from './lib/side-nav/public-api';
