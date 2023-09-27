@@ -1,8 +1,18 @@
 <mat-drawer-container class="sudarshan-side-nav-container">
   <mat-drawer mode="side" opened>
-    <mat-nav-list>
+    <mat-selection-list multiple="false" hideSingleSelectionIndicator>
+      <mat-list-option
+        *ngFor="let nav of configuration"
+        [routerLink]="nav?.navigationURL"
+      >
+        <mat-icon matListItemIcon> {{ nav?.iconName }} </mat-icon>
+        <div matListItemTitle>{{ nav?.menuName }}</div>
+        <!-- <div matListItemLine>{{folder.updated | date}}</div> -->
+      </mat-list-option>
+    </mat-selection-list>
+    <!-- <mat-nav-list>
       <a mat-list-item *ngFor="let nav of configuration">{{ nav?.menuName }}</a>
-    </mat-nav-list>
+    </mat-nav-list> -->
   </mat-drawer>
   <mat-drawer-content>
     <ng-content></ng-content>

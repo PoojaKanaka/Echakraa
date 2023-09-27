@@ -1,6 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ITopNavBarConfiguration, TopNavBarService } from 'sudarshan-component';
+import {
+  ISidenavConfiguration,
+  ITopNavBarConfiguration,
+  SideNavService,
+  TopNavBarService,
+} from 'sudarshan-component';
 
 @Component({
   selector: 'app-layout',
@@ -10,28 +15,55 @@ import { ITopNavBarConfiguration, TopNavBarService } from 'sudarshan-component';
 })
 export class LayoutComponent {
   topNavBarConfiguration: ITopNavBarConfiguration;
+  sidenavConfiguration: ISidenavConfiguration[];
+
   hospitalFormControl: FormControl = new FormControl(null);
 
-  constructor(private topNavBarService: TopNavBarService) {
+  constructor(
+    private topNavBarService: TopNavBarService,
+    private sideNavService: SideNavService
+  ) {
     this.initTopNavBarConfigutration();
+    this.initSideNavConfiguration();
     this.topNavBarService?.setConfiguration(this.topNavBarConfiguration);
+    this.sideNavService?.setConfigration(this.sidenavConfiguration);
   }
 
   initTopNavBarConfigutration(): void {
     this.topNavBarConfiguration = {
       appName: 'Admin Portal',
-      controlConfiguration: {
-        formControl: this.hospitalFormControl,
-        displayKey: 'name',
-        controlList: [
-          {
-            name: 'Hospital 1',
-          },
-          {
-            name: 'Hospital 2',
-          },
-        ],
-      },
+      // controlConfiguration: {
+      //   formControl: this.hospitalFormControl,
+      //   displayKey: 'name',
+      //   controlList: [
+      //     {
+      //       name: 'Hospital 1',
+      //     },
+      //     {
+      //       name: 'Hospital 2',
+      //     },
+      //   ],
+      // },
     };
+  }
+
+  initSideNavConfiguration(): void {
+    this.sidenavConfiguration = [
+      {
+        menuName: 'Dashboard',
+        navigationURL: ['.'],
+        iconName: 'dashboard',
+      },
+      {
+        menuName: 'Hospitals',
+        navigationURL: ['hospital'],
+        iconName: 'apartment',
+      },
+      {
+        menuName: 'Doctors',
+        navigationURL: ['doctor'],
+        iconName: 'person_add',
+      },
+    ];
   }
 }

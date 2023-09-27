@@ -2,12 +2,13 @@
   <button mat-icon-button *ngIf="!configuration?.hideMenuButton">
     <mat-icon>menu</mat-icon>
   </button>
-  <span> {{ configuration?.appName }} </span>
+  <mat-label> {{ configuration?.appName }} </mat-label>
   <mat-form-field
     appearance="outline"
     color="accent"
     [subscriptSizing]="'dynamic'"
     class="ms-4"
+    *ngIf="configuration?.controlConfiguration"
   >
     <mat-label>Toppings</mat-label>
     <mat-select

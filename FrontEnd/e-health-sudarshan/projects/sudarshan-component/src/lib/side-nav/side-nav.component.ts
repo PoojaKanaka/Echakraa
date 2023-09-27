@@ -9,7 +9,7 @@ import { SideNavService } from './side-nav.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'e-health-sudarshan-lib-side-nav',
+  selector: 'lib-side-nav',
   templateUrl: './side-nav.component.html',
   styleUrls: ['./side-nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
