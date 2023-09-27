@@ -1,0 +1,15 @@
+:host {
+  .inner-wrapper {
+    mat-card {
+      mat-label {
+        font-size: 20px;
+      }
+    }
+    .boundry-wrapper {
+      max-width: 1150px;
+    }
+    .material-symbols-outlined {
+      font-size: 34px;
+    }
+  }
+}

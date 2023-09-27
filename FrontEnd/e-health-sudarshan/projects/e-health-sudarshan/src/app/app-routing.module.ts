@@ -5,6 +5,13 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
+      import('./end-user-portal/end-user-portal.module').then(
+        (m) => m.EndUserPortalModule
+      ),
+  },
+  {
+    path: 'auth',
+    loadChildren: () =>
       import('./authentication/authentication.module').then(
         (m) => m.AuthenticationModule
       ),
