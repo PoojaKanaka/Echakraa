@@ -9,6 +9,7 @@ export const UTILITIES = {
     LAB_TEST_SVG: 'lab-test.svg',
     NO_DATA_SVG: 'no-data.svg',
     CAR_BOOKING_SVG: 'car-booking.svg',
+    TIFIN_SVG: 'tiffin.svg',
   },
   REGEX_PATTERN: {
     MOBILE_NUMBER: /^(\+\d{1,3}[- ]?)?\d{10}$/,

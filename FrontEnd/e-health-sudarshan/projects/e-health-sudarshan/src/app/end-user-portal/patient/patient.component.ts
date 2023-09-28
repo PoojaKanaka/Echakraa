@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { UTILITIES } from '../../utilities/utilities';
 
 @Component({
   selector: 'app-patient',
@@ -99,6 +100,11 @@ export class PatientComponent {
         'https://assets-global.website-files.com/61d565f8e34ebb4e5dae2da8/6253e140e575711f557e26ba_Patient_Icons-43.svg',
       title: 'Prescription on mobile',
       subTitle: 'Access your digital prescription instantly on the app',
+    },
+    {
+      imgURL: `${UTILITIES.ILLUSTRATION.DEFAULT_URL}${UTILITIES.ILLUSTRATION.TIFIN_SVG}`,
+      title: 'Order Tifin',
+      subTitle: 'There is always demand for healthy, hygienic and tasty food.',
     },
   ];
 }
