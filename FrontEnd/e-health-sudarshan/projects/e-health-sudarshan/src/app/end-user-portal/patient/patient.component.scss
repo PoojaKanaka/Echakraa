@@ -1,0 +1,28 @@
+:host {
+  .boundry-wrapper {
+    max-width: 1150px;
+  }
+  .first-section {
+    background: #f9f9f9;
+  }
+  li {
+    font-size: 20px;
+  }
+  .font-weight-bold-imp {
+    font-weight: bold !important;
+  }
+  .book-appointment-btn {
+    min-width: 270px;
+    height: 46px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  .grid-item {
+    padding: 20px;
+  }
+  .font-size-24 {
+    font-size: 24px;
+  }
+}
