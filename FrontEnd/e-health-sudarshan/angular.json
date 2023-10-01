@@ -1,0 +1,138 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "sudarshan-component": {
+      "projectType": "library",
+      "root": "projects/sudarshan-component",
+      "sourceRoot": "projects/sudarshan-component/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sudarshan-component/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sudarshan-component/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sudarshan-component/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/sudarshan-component/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "e-health-sudarshan": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "changeDetection": "OnPush"
+        }
+      },
+      "root": "projects/e-health-sudarshan",
+      "sourceRoot": "projects/e-health-sudarshan/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/e-health-sudarshan",
+            "index": "projects/e-health-sudarshan/src/index.html",
+            "main": "projects/e-health-sudarshan/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/e-health-sudarshan/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/e-health-sudarshan/src/favicon.ico",
+              "projects/e-health-sudarshan/src/assets"
+            ],
+            "styles": [
+              "projects/e-health-sudarshan/src/styles.scss",
+              "@angular/material/prebuilt-themes/indigo-pink.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/e-health-sudarshan/src/environments/environment.ts",
+                  "with": "projects/e-health-sudarshan/src/environments/environment.development.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "e-health-sudarshan:build:production"
+            },
+            "development": {
+              "browserTarget": "e-health-sudarshan:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "e-health-sudarshan:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/e-health-sudarshan/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/e-health-sudarshan/src/favicon.ico",
+              "projects/e-health-sudarshan/src/assets"
+            ],
+            "styles": ["projects/e-health-sudarshan/src/styles.scss"],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "2446bc50-cf46-4d4b-8b61-c88734976768"
+  }
+}
