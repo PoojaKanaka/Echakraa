@@ -1,0 +1,52 @@
+<app-end-user-header></app-end-user-header>
+<div
+  class="inner-wrapper w-100 d-flex flex-column justify-content-center align-items-center"
+>
+  <section class="d-flex flex-wrap justify-content-start mt-5 boundry-wrapper">
+    <ng-container *ngFor="let feature of features; let last = last">
+      <mat-card
+        class="mb-4"
+        [ngClass]="{
+          'me-4': !last
+        }"
+        [style.width.px]="250"
+      >
+        <mat-card-content class="d-flex flex-column align-items-center">
+          <img [src]="feature.imgURL" height="150px" width="150px" />
+          <mat-label class="mt-3"> {{ feature.title }} </mat-label>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </section>
+  <mat-divider class="boundry-wrapper w-100"></mat-divider>
+  <mat-label class="display-6 mt-5">CHECK OUT OUR DOCTOR SERVICES </mat-label>
+  <section class="d-flex flex-wrap justify-content-start mt-5 boundry-wrapper">
+    <ng-container *ngFor="let doctorService of doctorServices; let last = last">
+      <mat-card
+        class="mb-4"
+        [ngClass]="{
+          'me-4': !last
+        }"
+        [style.width.px]="300"
+      >
+        <mat-card-content class="d-flex flex-column align-items-center">
+          <!-- <img [src]="feature.imgURL" height="150px" width="150px" /> -->
+          <span class="material-symbols-outlined primary-color">
+            {{ doctorService?.iconName }}
+          </span>
+          <mat-label
+            class="mt-3 font-weight-bold primary-color"
+            [style.fontWeight]="500"
+          >
+            {{ doctorService.title }}
+          </mat-label>
+          <label class="mt-3"> {{ doctorService.subTitle }} </label>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </section>
+  <!-- <section>
+    <!-- <img [src]="VIDEO_CALL_ILLUSTRATION_URL" />
+    <img [src]="SYNC_SVG_ILLUSTRATION_URL" height="350px" />
+  </section> -->
+</div>

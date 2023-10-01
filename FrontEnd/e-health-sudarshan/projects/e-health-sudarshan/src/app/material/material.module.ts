@@ -10,6 +10,9 @@ import {
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const matFormFieldAppearance: MatFormFieldDefaultOptions = {
   appearance: 'outline',
@@ -23,6 +26,9 @@ const modules = [
   MatInputModule,
   MatButtonModule,
   MatIconModule,
+  MatToolbarModule,
+  MatDividerModule,
+  MatExpansionModule,
 ];
 
 @NgModule({

@@ -1,0 +1,135 @@
+<app-end-user-header></app-end-user-header>
+<section class="d-flex flex-column first-section">
+  <section class="d-flex flex-row justify-content-center mt-5">
+    <div class="d-flex flex-column me-5">
+      <div class="d-flex flex-column mb-4">
+        <mat-label class="primary-color display-5 font-weight-bold-imp"
+          >Get the care </mat-label
+        ><mat-label class="display-5 font-weight-bold-imp"
+          >that you need</mat-label
+        >
+      </div>
+      <li class="text-secondary">View E-prescriptions anytime, anywhere</li>
+      <li class="text-secondary">Do Follow-up chats with your doctor</li>
+      <li class="text-secondary">Get important reminders before consult</li>
+      <button
+        mat-flat-button
+        color="primary"
+        class="mt-5 align-self-center font-weight-bold-imp book-appointment-btn"
+      >
+        Book an appointment
+      </button>
+      <div class="d-flex flex-row justify-content-center mt-3">
+        <img
+          class="me-2"
+          src="https://assets-global.website-files.com/61d565f8e34ebb4e5dae2da8/61de9109389b4e1bb8ba6f66_Apple%20Store.png"
+          height="40px"
+        />
+        <img
+          src="https://assets-global.website-files.com/61d565f8e34ebb4e5dae2da8/61de9109a88d8844eedad418_Playstore.png"
+          height="40px"
+        />
+      </div>
+    </div>
+    <img
+      class="ms-5"
+      src="https://assets-global.website-files.com/61d565f8e34ebb4e5dae2da8/61e5637991b0194445f73f7b_Patient%20Hero%20Image-p-2000.png"
+      width="643"
+    />
+  </section>
+</section>
+<section>
+  <div
+    class="d-flex flex-column align-items-center justify-content-space-between boundry-wrapper ms-auto me-auto mt-6"
+  >
+    <section class="d-flex justify-content-center second-section">
+      <mat-label
+        class="display-5 font-weight-bold-imp w-75 d-block"
+        [style.textAlign]="'center'"
+      >
+        <span class="primary-color"> Here to help </span> you to get the best
+        care</mat-label
+      >
+    </section>
+    <section class="grid-container mt-6">
+      <ng-container *ngFor="let benefit of patientbenifits">
+        <div class="grid-item d-flex flex-column align-items-center">
+          <img [src]="benefit?.imgURL" height="105px" />
+          <mat-label
+            class="text-center font-size-24 font-weight-bold-imp mt-2"
+            >{{ benefit?.title }}</mat-label
+          >
+          <mat-label
+            class="text-center mt-2 text-secondary"
+            [style.width.%]="90"
+            [style.fontSize.px]="18"
+            >{{ benefit?.subTitle }}</mat-label
+          >
+        </div>
+      </ng-container>
+    </section>
+    <section class="d-flex justify-content-center second-section mt-6">
+      <mat-label
+        class="display-5 font-weight-bold-imp w-75 d-block"
+        [style.textAlign]="'center'"
+      >
+        <span class="primary-color"> What we offer? </span> at E Health
+        Sudarshan</mat-label
+      >
+    </section>
+    <section class="mt-6">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let offer of whatWeOffer">
+          <mat-expansion-panel-header class="font-weight-bold-imp">
+            {{ offer?.question }}
+          </mat-expansion-panel-header>
+          <mat-panel-description class="font-weight-bold-imp">
+            {{ offer?.answer }}
+          </mat-panel-description>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </section>
+    <section class="d-flex justify-content-center second-section mt-6">
+      <mat-label
+        class="display-5 font-weight-bold-imp w-75 d-block"
+        [style.textAlign]="'center'"
+      >
+        Here's how E Health Sudarshan works for you</mat-label
+      >
+    </section>
+    <section class="mt-6 d-flex flex-row">
+      <ng-container *ngFor="let work of howItWorksForYouFirst">
+        <div class="grid-item d-flex flex-column align-items-center">
+          <img [src]="work?.imgURL" height="105px" />
+          <mat-label
+            class="text-center font-size-24 font-weight-bold-imp mt-2"
+            >{{ work?.title }}</mat-label
+          >
+          <mat-label
+            class="text-center mt-2 text-secondary"
+            [style.width.%]="90"
+            [style.fontSize.px]="18"
+            >{{ work?.subTitle }}</mat-label
+          >
+        </div>
+      </ng-container>
+    </section>
+    <section class="d-flex flex-row">
+      <ng-container *ngFor="let work of howItWorksForYouSecond">
+        <div class="grid-item d-flex flex-column align-items-center">
+          <img [src]="work?.imgURL" height="105px" />
+          <mat-label
+            class="text-center font-size-24 font-weight-bold-imp mt-2"
+            >{{ work?.title }}</mat-label
+          >
+          <mat-label
+            class="text-center mt-2 text-secondary"
+            [style.width.%]="90"
+            [style.fontSize.px]="18"
+            >{{ work?.subTitle }}</mat-label
+          >
+        </div>
+      </ng-container>
+    </section>
+  </div>
+</section>

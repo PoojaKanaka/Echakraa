@@ -44,6 +44,10 @@ $theme-warn: mat.get-color-from-palette(mat.$red-palette);
   background-color: $theme-warn;
 }
 
+.mt-6 {
+  margin-top: 6rem;
+}
+
 //////////////////////
 // form field theme //
 //////////////////////
