@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { HttpClientModule } from '@angular/common/http';
 
 const matFormFieldAppearance: MatFormFieldDefaultOptions = {
   appearance: 'outline',
@@ -29,6 +30,7 @@ const modules = [
   MatToolbarModule,
   MatDividerModule,
   MatExpansionModule,
+  HttpClientModule,
 ];
 
 @NgModule({

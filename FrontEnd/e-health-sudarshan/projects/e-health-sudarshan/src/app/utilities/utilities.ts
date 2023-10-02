@@ -16,6 +16,14 @@ export const UTILITIES = {
   },
   ERROR_MESSAGE: {
     REQUIRED: (controlName: string) => `${controlName} is required.`,
-    PATTERN: (controlname: string) => `Enter valid ${controlname}.`,
+    PATTERN: (controlName: string) => `Enter valid ${controlName}.`,
+    MINLENGTH: (length: number) => `Minimum ${length} character are required`,
+  },
+  ROUTE_PATH: {
+    AUTH: 'auth',
+    ADMIN_PORTAL: 'admin-portal',
+    DASHBOARD: 'dashboard',
+    HOSPITAL: 'hospital',
+    DOCTOR: 'doctor',
   },
 };

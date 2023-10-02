@@ -13,5 +13,12 @@
   <button mat-button>Surgeries</button>
   <button mat-button routerLink="/patient">Patients</button>
 
-  <button mat-flat-button color="primary" class="ms-auto">Login/Signup</button>
+  <button
+    mat-flat-button
+    color="primary"
+    class="ms-auto"
+    (click)="navigateToAuth()"
+  >
+    Login/Signup
+  </button>
 </mat-toolbar>

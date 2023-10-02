@@ -1322,19 +1322,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kanaka\\.nuget\\packages\\": {}
+    "C:\\Users\\ue\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\ModelBuilder.csproj",
+      "projectUniqueName": "C:\\Users\\ue\\Desktop\\Echakraa\\ModelBuilder\\ModelBuilder.csproj",
       "projectName": "ModelBuilder",
-      "projectPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\ModelBuilder.csproj",
-      "packagesPath": "C:\\Users\\kanaka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\ModelBuilder\\obj\\",
+      "projectPath": "C:\\Users\\ue\\Desktop\\Echakraa\\ModelBuilder\\ModelBuilder.csproj",
+      "packagesPath": "C:\\Users\\ue\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ue\\Desktop\\Echakraa\\ModelBuilder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kanaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ue\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1348,8 +1348,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\kanaka\\source\\repos\\Echakraa\\Data\\Data.csproj"
+            "C:\\Users\\ue\\Desktop\\Echakraa\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\ue\\Desktop\\Echakraa\\Data\\Data.csproj"
             }
           }
         }
@@ -1401,7 +1401,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   },

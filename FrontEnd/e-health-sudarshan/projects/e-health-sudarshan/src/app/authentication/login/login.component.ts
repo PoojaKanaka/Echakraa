@@ -2,10 +2,11 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UTILITIES } from '../../utilities/utilities';
+import { AuthService } from '../auth.service';
 
 interface IAuthGroupSchema {
-  mobile_number: FormControl<number | string | null>;
-  otp: FormControl<number | null>;
+  userId: FormControl<string | null>;
+  password: FormControl<string | null>;
 }
 
 @Component({
@@ -18,26 +19,38 @@ export class LoginComponent {
   authFormGroup!: FormGroup<IAuthGroupSchema>;
 
   get mobileNumberControl(): FormControl {
-    return this.authFormGroup?.get('mobile_number') as FormControl;
+    return this.authFormGroup?.get('userId') as FormControl;
+  }
+
+  get passwordControl(): FormControl {
+    return this.authFormGroup?.get('password') as FormControl;
   }
 
   ERROR_MESSAGE = UTILITIES.ERROR_MESSAGE;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private authService: AuthService) {
     this.createFormGroup();
   }
 
   createFormGroup(): void {
     this.authFormGroup = new FormGroup({
-      mobile_number: new FormControl(null, [
+      userId: new FormControl(null, [
         Validators.required,
         Validators.pattern(UTILITIES.REGEX_PATTERN.MOBILE_NUMBER),
       ]),
-      otp: new FormControl(null),
+      password: new FormControl(null, [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
     });
   }
 
   navigateToDoctorPortal(): void {
-    this.router.navigate(['.', 'admin-portal']);
+    // const rowValue = this.authFormGroup.getRawValue();
+    // this.authService.login(rowValue).subscribe({
+    //   next: (res) => console.log(':::: res', res),
+    //   error: (err) => console.log('::: error', err),
+    // });
+    this.router.navigate(['.', UTILITIES.ROUTE_PATH.ADMIN_PORTAL]);
   }
 }
