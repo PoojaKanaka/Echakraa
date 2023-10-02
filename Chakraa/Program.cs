@@ -23,6 +23,12 @@ builder.Services.AddControllersWithViews();
 //builder.Services.AddMediatR(new Type[]{
 //                typeof(AssemblyMarker)
 //            });
+var corsOriginsSection = builder.Configuration.GetSection("CorsOrigins");
+var origins = corsOriginsSection.Get<CorsOrigins>();
+builder.Services.AddCors(options => options.AddPolicy("AllowSpecificOrigin", p => p
+                                    .WithOrigins(origins.Urls)
+                                    .AllowAnyHeader()
+                                    .WithMethods("PUT", "DELETE", "GET", "POST", "PATCH")));
 
 builder.Services.AddMediatR(x => x.RegisterServicesFromAssemblies(typeof(AssemblyMarker).Assembly));
 builder.Services.AddSwaggerGen(options =>
@@ -46,6 +52,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowSpecificOrigin");
 app.UseStaticFiles();
 
 app.UseRouting();
