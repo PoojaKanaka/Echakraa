@@ -64,6 +64,11 @@ export class LayoutComponent {
         navigationURL: ['doctor'],
         iconName: 'person_add',
       },
+      {
+        menuName: 'Logout',
+        navigationURL: ['auth'],
+        iconName: 'logout',
+      },
     ];
   }
 }

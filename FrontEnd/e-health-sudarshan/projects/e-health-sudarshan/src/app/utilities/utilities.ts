@@ -26,4 +26,9 @@ export const UTILITIES = {
     HOSPITAL: 'hospital',
     DOCTOR: 'doctor',
   },
+  LOCAL_STORAGE: {
+    USER_INFO: 'userInfo',
+    TOKEN: 'token',
+    ROLE: 'role',
+  },
 };

@@ -24,7 +24,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   login(payload: ILoginPost) {
-    return this.http.post<Observable<ILoginRes>>(
+    return this.http.post<ILoginRes>(
       `${environment.SERVER_URL}/api/LoginLogout/Login`,
       payload
     );

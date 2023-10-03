@@ -51,11 +51,17 @@ export class LoginComponent {
   }
 
   navigateToDoctorPortal(): void {
-    this.router.navigate(['.', UTILITIES.ROUTE_PATH.ADMIN_PORTAL]);
     const rowValue = this.authFormGroup.getRawValue();
+    this.router.navigate(['.', UTILITIES.ROUTE_PATH.ADMIN_PORTAL]);
     this.authService.login(rowValue).subscribe({
       next: (res) => {
         console.log('::: res', res);
+        localStorage.setItem(
+          UTILITIES.LOCAL_STORAGE.USER_INFO,
+          JSON.stringify(res)
+        );
+        localStorage.setItem(UTILITIES.LOCAL_STORAGE.TOKEN, res.token);
+        localStorage.setItem(UTILITIES.LOCAL_STORAGE.ROLE, res.role);
         this.router.navigate(['.', UTILITIES.ROUTE_PATH.ADMIN_PORTAL]);
       },
       error: (err) => {
