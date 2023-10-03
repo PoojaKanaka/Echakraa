@@ -1,10 +1,12 @@
 ﻿using Data.Entities;
+using Data.Models;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using ModelBuilder.Projections;
 using ModelBuilder.Queries;
+using System.Data;
 
 namespace Chakraa.Controllers.Account
 {
@@ -33,18 +35,23 @@ namespace Chakraa.Controllers.Account
 
         [AllowAnonymous]
         [HttpPost("Login")]
-        public async Task<SignIn> SignIn([FromBody] Login userData)
+        public async Task<IActionResult> SignIn([FromBody] LoginDataModel userData)
         {
-            var user = await _mediator.Send(new LoginQuery()
+            try
             {
-                UserId = userData.UserId,
-                Password = userData.Password,
-                MobileNumber=userData.MobileNumber,
-                Email=userData.EmailId,
-            });
-
-            return await Task.FromResult(user);
-            //return View();
+                var user = await _mediator.Send(new LoginQuery()
+                {
+                   
+                    Password = userData.Password,
+                    MobileNumber = userData.MobileNumber,
+                    
+                });
+                return Ok(user);
+            }
+            catch(Exception ex) {
+                return StatusCode(300, ex.Message);
+            }
+           
 
         }
     }

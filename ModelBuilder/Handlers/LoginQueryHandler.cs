@@ -30,37 +30,37 @@ namespace ModelBuilder.Handlers
 
         public Task<SignIn> Handle(LoginQuery request, CancellationToken cancellationToken)
         {
-            var user = _dbContext.Login.FirstOrDefault(x => x.UserId == request.UserId && x.Password == request.Password);
+            var result = new SignIn();
+            var user = _dbContext.Login.FirstOrDefault(x => x.UserId == request.MobileNumber && x.Password == request.Password);
             if (user == null)
-                return null;
-
-            var tokenHandler = new JwtSecurityTokenHandler();
-
-            //var key = Encoding.ASCII.GetBytes(_appsettings.Secret);
-
-            var key = Encoding.ASCII.GetBytes("4DB73B6D1CA74E39E1BE94487638F3FFEC8F2ECEA1AEE11CCB79AAA64E90E663");
-            var tokenDescriptor = new SecurityTokenDescriptor
+                throw new Exception("User with this cobination does not exist");
+            else
             {
+                var tokenHandler = new JwtSecurityTokenHandler();
+
+                //var key = Encoding.ASCII.GetBytes(_appsettings.Secret);
+
+                var key = Encoding.ASCII.GetBytes("4DB73B6D1CA74E39E1BE94487638F3FFEC8F2ECEA1AEE11CCB79AAA64E90E663");
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
 
 
-                Expires = DateTime.UtcNow.AddMinutes(7),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-                Issuer = "admin",
-                Audience = "admin"
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            var getToken = tokenHandler.WriteToken(token);
+                    Expires = DateTime.UtcNow.AddMinutes(7),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                    Issuer = "admin",
+                    Audience = "admin"
+                };
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                var getToken = tokenHandler.WriteToken(token);
 
 
-            var result = new SignIn
-            {
 
-                token = getToken,
-                userId = user.UserId,
-                //Email = user.Email,
-
-            };
-            return Task.FromResult(result);
+                result.token = getToken;
+                result.userId = user.UserId;
+                return Task.FromResult(result);
+            }
+            
         }
+        
     }
 }
