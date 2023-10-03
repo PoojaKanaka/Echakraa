@@ -5,7 +5,7 @@ import {
   ITopNavBarConfiguration,
   SideNavService,
   TopNavBarService,
-} from 'sudarshan-component';
+} from '@sudarshan-component';
 
 @Component({
   selector: 'app-layout',

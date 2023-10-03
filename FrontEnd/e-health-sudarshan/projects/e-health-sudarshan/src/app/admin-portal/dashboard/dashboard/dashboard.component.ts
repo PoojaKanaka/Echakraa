@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { IPageHeaderConfig, PageHeaderService } from 'sudarshan-component';
+import { IPageHeaderConfig, PageHeaderService } from '@sudarshan-component';
 
 @Component({
   selector: 'app-dashboard',

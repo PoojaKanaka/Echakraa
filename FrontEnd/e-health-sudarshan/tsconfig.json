@@ -19,7 +19,7 @@
     "target": "ES2022",
     "module": "ES2022",
     "paths": {
-      "sudarshan-component": ["dist/sudarshan-component"]
+      "@sudarshan-component": ["dist/sudarshan-component"]
     },
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"]

@@ -1,19 +1,19 @@
 <form [formGroup]="authFormGroup" class="d-flex flex-column">
   <mat-form-field class="mat-form-field">
     <mat-label> Enter Mobile Number </mat-label>
-    <input matInput formControlName="userId" type="text" />
+    <input matInput formControlName="mobileNumber" type="text" />
     <mat-error *ngIf="mobileNumberControl?.hasError('required')">
-      {{ ERROR_MESSAGE.REQUIRED("User Id") }}
+      {{ ERROR_MESSAGE.REQUIRED("Mobile Number") }}
     </mat-error>
     <mat-error *ngIf="mobileNumberControl?.hasError('pattern')">
-      {{ ERROR_MESSAGE.PATTERN("User Id") }}
+      {{ ERROR_MESSAGE.PATTERN("Mobile Number") }}
     </mat-error>
   </mat-form-field>
   <mat-form-field class="mat-form-field">
     <mat-label> Enter Password </mat-label>
     <input matInput formControlName="password" type="password" />
     <mat-error *ngIf="passwordControl?.hasError('required')">
-      {{ ERROR_MESSAGE.REQUIRED("User Id") }}
+      {{ ERROR_MESSAGE.REQUIRED("Password") }}
     </mat-error>
     <mat-error *ngIf="passwordControl?.hasError('minlength')">
       {{ ERROR_MESSAGE.MINLENGTH(4) }}
