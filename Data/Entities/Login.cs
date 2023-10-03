@@ -12,5 +12,6 @@ namespace Data.Entities
         public string? Password { get; set; }
         public string? MobileNumber { get; set; }
         public string? Email { get; set; }
+
     }
 }
