@@ -1,13 +1,4 @@
 <section class="page-header d-flex align-items-center px-4">
   <mat-label color="primary"> {{ pageHeaderConfig?.title }} </mat-label>
-  <button
-    mat-flat-button
-    color="primary"
-    class="ms-auto"
-    *ngIf="pageHeaderConfig?.buttonConfig"
-    (click)="pageHeaderConfig?.buttonConfig?.onClick()"
-  >
-    {{ pageHeaderConfig?.buttonConfig?.title }}
-  </button>
 </section>
 <mat-divider></mat-divider>

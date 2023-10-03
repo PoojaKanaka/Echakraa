@@ -4,7 +4,7 @@ import { environment } from '../../environments/environment.development';
 import { Observable } from 'rxjs';
 
 export interface ILoginPost {
-  mobileNumber: string;
+  userId: string;
   password: string;
 }
 

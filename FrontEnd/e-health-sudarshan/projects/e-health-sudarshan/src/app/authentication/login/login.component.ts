@@ -6,7 +6,7 @@ import { AuthService } from '../auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 interface IAuthGroupSchema {
-  mobileNumber: FormControl<string | null>;
+  userId: FormControl<string | null>;
   password: FormControl<string | null>;
 }
 
@@ -20,7 +20,7 @@ export class LoginComponent {
   authFormGroup!: FormGroup<IAuthGroupSchema>;
 
   get mobileNumberControl(): FormControl {
-    return this.authFormGroup?.get('mobileNumber') as FormControl;
+    return this.authFormGroup?.get('userId') as FormControl;
   }
 
   get passwordControl(): FormControl {
@@ -39,7 +39,7 @@ export class LoginComponent {
 
   createFormGroup(): void {
     this.authFormGroup = new FormGroup({
-      mobileNumber: new FormControl(null, [
+      userId: new FormControl(null, [
         Validators.required,
         Validators.pattern(UTILITIES.REGEX_PATTERN.MOBILE_NUMBER),
       ]),
@@ -71,5 +71,6 @@ export class LoginComponent {
         console.log('::: error', err);
       },
     });
+    this.router.navigate(['.', UTILITIES.ROUTE_PATH.ADMIN_PORTAL]);
   }
 }

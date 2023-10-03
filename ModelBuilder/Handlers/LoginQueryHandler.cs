@@ -31,7 +31,7 @@ namespace ModelBuilder.Handlers
         public Task<SignIn> Handle(LoginQuery request, CancellationToken cancellationToken)
         {
             var result = new SignIn();
-            var user = _dbContext.Login.FirstOrDefault(x => x.UserId == request.MobileNumber && x.Password == request.Password);
+            var user = _dbContext.Login.FirstOrDefault(x => x.MobileNumber == request.MobileNumber.Trim() && x.Password == request.Password.Trim());
             if (user == null)
                 throw new Exception("User with this cobination does not exist");
             else

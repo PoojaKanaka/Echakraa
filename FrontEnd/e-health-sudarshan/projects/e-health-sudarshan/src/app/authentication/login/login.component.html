@@ -1,12 +1,12 @@
 <form [formGroup]="authFormGroup" class="d-flex flex-column">
   <mat-form-field class="mat-form-field">
     <mat-label> Enter Mobile Number </mat-label>
-    <input matInput formControlName="mobileNumber" type="number" />
+    <input matInput formControlName="userId" type="text" />
     <mat-error *ngIf="mobileNumberControl?.hasError('required')">
-      {{ ERROR_MESSAGE.REQUIRED("Mobile number") }}
+      {{ ERROR_MESSAGE.REQUIRED("User Id") }}
     </mat-error>
     <mat-error *ngIf="mobileNumberControl?.hasError('pattern')">
-      {{ ERROR_MESSAGE.PATTERN("Mobile number") }}
+      {{ ERROR_MESSAGE.PATTERN("User Id") }}
     </mat-error>
   </mat-form-field>
   <mat-form-field class="mat-form-field">
