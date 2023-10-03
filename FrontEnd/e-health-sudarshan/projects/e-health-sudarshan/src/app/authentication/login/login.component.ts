@@ -46,11 +46,11 @@ export class LoginComponent {
   }
 
   navigateToDoctorPortal(): void {
-    // const rowValue = this.authFormGroup.getRawValue();
-    // this.authService.login(rowValue).subscribe({
-    //   next: (res) => console.log(':::: res', res),
-    //   error: (err) => console.log('::: error', err),
-    // });
+    const rowValue = this.authFormGroup.getRawValue();
+    this.authService.login(rowValue).subscribe({
+      next: (res) => console.log(':::: res', res),
+      error: (err) => console.log('::: error', err),
+    });
     this.router.navigate(['.', UTILITIES.ROUTE_PATH.ADMIN_PORTAL]);
   }
 }

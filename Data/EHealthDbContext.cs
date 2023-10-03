@@ -11,6 +11,7 @@ namespace Data
     public interface IEHealthDbContext {
 
         DbSet<Login> Login { get; set; }
+       DbSet<HospitalDetails> HospitalDetails { get; set; }
     }
 
     public class EHealthDbContext : DbContext, IEHealthDbContext
@@ -20,6 +21,8 @@ namespace Data
         }
 
         public virtual DbSet<Login> Login { get; set; }
+        public virtual DbSet<HospitalDetails> HospitalDetails { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)

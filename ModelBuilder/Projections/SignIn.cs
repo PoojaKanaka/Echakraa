@@ -14,5 +14,6 @@ namespace ModelBuilder.Projections
         public string  userId { get; set; }
         public string error { get; set; }
         public string Email { get; set; }
+        public int OTP { get; set; }
     }
 }

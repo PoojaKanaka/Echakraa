@@ -1,9 +1,11 @@
 using Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
 using ModelBuilder;
 using ModelBuilder.Configuration;
+using ModelBuilder.Services;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,11 +20,17 @@ builder.Services.AddDbContext<EHealthDbContext>(options =>
 // Add services to the container.
 builder.Services.AddTransient<ISqlConnectionService, SqlConnectionService>();
 builder.Services.AddScoped<IAppsettings, AppSettings>();
+builder.Services.AddTransient<IEmailSender, AuthMessageSender>();
+builder.Services.AddTransient<ISmsSender, AuthMessageSender>();
+builder.Services.Configure<SMSoptions>(builder.Configuration.GetSection("SMSoptions"));
+
+//builder.Services.Configure<SMSoptions>(Configuration);
 builder.Services.AddControllersWithViews();
 //builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
 //builder.Services.AddMediatR(new Type[]{
 //                typeof(AssemblyMarker)
 //            });
+
 var corsOriginsSection = builder.Configuration.GetSection("CorsOrigins");
 var origins = corsOriginsSection.Get<CorsOrigins>();
 builder.Services.AddCors(options => options.AddPolicy("AllowSpecificOrigin", p => p

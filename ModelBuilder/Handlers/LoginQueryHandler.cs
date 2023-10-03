@@ -19,12 +19,12 @@ namespace ModelBuilder.Handlers
     {
         
         private readonly EHealthDbContext _dbContext;
-        private readonly IAppsettings _appsettings;
 
-        public LoginQueryHandler( IOptions<AppSettings> appsettings, EHealthDbContext dbContext)
+
+        public LoginQueryHandler(  EHealthDbContext dbContext)
         {
             
-            _appsettings = appsettings.Value;
+           
             _dbContext = dbContext;
         }
 
@@ -50,6 +50,7 @@ namespace ModelBuilder.Handlers
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var getToken = tokenHandler.WriteToken(token);
+
 
             var result = new SignIn
             {
