@@ -4,7 +4,7 @@ import { environment } from '../../environments/environment.development';
 import { Observable } from 'rxjs';
 
 export interface ILoginPost {
-  userId: string;
+  mobileNumber: string;
   password: string;
 }
 
@@ -25,7 +25,7 @@ export class AuthService {
 
   login(payload: ILoginPost) {
     return this.http.post<Observable<ILoginRes>>(
-      `${environment.SERVER_URL}/Login`,
+      `${environment.SERVER_URL}/api/LoginLogout/Login`,
       payload
     );
   }
