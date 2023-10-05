@@ -23,20 +23,91 @@ namespace Chakraa.Controllers.Hospital
       
 
         [HttpPost("HospitalRegistration")]
-        public async Task<HospitalDetails> Registration([FromBody] HospitalDetails Data)
+        public async Task<IActionResult> Registration([FromBody] HospitalDetails Data)
         {
-            var hospital = await _mediator.Send(new HospitalRegistrationQuery()
+            try
             {
-                HospitalName = Data.HospitalName,
-                Address = Data.Address,
-                MobileNumber = Data.MobileNumber,
-                RegistrationNumber = Data.RegistrationNumber,
+                var hospital = await _mediator.Send(new HospitalRegistrationQuery()
+                {
+                    HospitalName = Data.HospitalName,
+                    Address = Data.Address,
+                    MobileNumber = Data.MobileNumber,
+                    RegistrationNumber = Data.RegistrationNumber,
 
-            });
+                });
 
-            return await Task.FromResult(hospital);
-            //return View();
+                return Ok(hospital);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(300, ex.Message);
+            }
+
 
         }
+
+        [HttpPost("GetHospitalData")]
+        public async Task<IActionResult> GetHospitalDetails(  int HospitalID)
+        {
+            try
+            {
+                var hospital = await _mediator.Send(new HospitalDetailsQuery()
+                {
+                    HospitalId = HospitalID
+
+                });
+
+                return Ok(hospital);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(300, ex.Message);
+            }
+           
+
+
+        }
+        [HttpPost("DeleteHospitalData")]
+        public async Task<IActionResult> DeleteHospitalDetails(int HospitalID)
+        {
+            try
+            {
+                var hospital = await _mediator.Send(new DeleteHospitalDetailsQuery()
+                {
+                    HospitalId = HospitalID
+
+                });
+
+                return Ok(hospital);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(300, ex.Message);
+            }
+
+
+
+        }
+
+
+        [HttpPost("GetAllHospitals")]
+        public async Task<IActionResult> GetAllHospital()
+        {
+            try
+            {
+                var hospital = await _mediator.Send(new AllHospitalDetailsQuery() { });
+                
+
+                return Ok(hospital);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(300, ex.Message);
+            }
+
+
+
+        }
+
     }
 }
