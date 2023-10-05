@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+} from '@angular/core';
 import { IPageHeaderConfig, PageHeaderService } from '@sudarshan-component';
 
 @Component({
@@ -7,7 +12,7 @@ import { IPageHeaderConfig, PageHeaderService } from '@sudarshan-component';
   styleUrls: ['./dashboard.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnDestroy {
   pageHeaderConfiguration: IPageHeaderConfig;
 
   constructor(private pageHeaderService: PageHeaderService) {
@@ -19,5 +24,9 @@ export class DashboardComponent {
     this.pageHeaderConfiguration = {
       title: 'Dashboard',
     };
+  }
+
+  ngOnDestroy(): void {
+    this.pageHeaderService?.setPageHeaderConfig(null);
   }
 }

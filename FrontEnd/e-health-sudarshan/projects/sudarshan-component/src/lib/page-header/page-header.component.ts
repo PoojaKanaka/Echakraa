@@ -1,4 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+} from '@angular/core';
 import { IPageHeaderConfig } from './page-header.schema';
 import { PageHeaderService } from './page-header.service';
 import { Subscription } from 'rxjs';
@@ -14,11 +18,15 @@ export class PageHeaderComponent {
 
   subs: Subscription;
 
-  constructor(private pageHeaderService: PageHeaderService) {
+  constructor(
+    private pageHeaderService: PageHeaderService,
+    private cdr: ChangeDetectorRef
+  ) {
     this.subs = new Subscription();
 
-    this.pageHeaderService
-      ?.getPageHeaderConfig()
-      ?.subscribe((config) => (this.pageHeaderConfig = config));
+    this.pageHeaderService?.getPageHeaderConfig()?.subscribe((config) => {
+      this.pageHeaderConfig = config;
+      this.cdr.markForCheck();
+    });
   }
 }

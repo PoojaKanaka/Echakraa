@@ -1,4 +1,7 @@
-<section class="page-header d-flex align-items-center px-4">
+<section
+  class="page-header d-flex align-items-center px-4"
+  *ngIf="!!pageHeaderConfig"
+>
   <mat-label color="primary"> {{ pageHeaderConfig?.title }} </mat-label>
   <button
     class="ms-auto"

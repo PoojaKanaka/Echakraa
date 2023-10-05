@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ListViewService {
+  private dataSource$: BehaviorSubject<any[]> = new BehaviorSubject([]);
 
-  constructor() { }
+  constructor() {}
+
+  setDataSource(data) {
+    this.dataSource$?.next(data);
+  }
+
+  getDataSource() {
+    return this.dataSource$.asObservable();
+  }
 }
