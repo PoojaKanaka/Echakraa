@@ -5,6 +5,12 @@
   "projects": {
     "sudarshan-component": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "changeDetection": "OnPush"
+        }
+      },
       "root": "projects/sudarshan-component",
       "sourceRoot": "projects/sudarshan-component/src",
       "prefix": "lib",

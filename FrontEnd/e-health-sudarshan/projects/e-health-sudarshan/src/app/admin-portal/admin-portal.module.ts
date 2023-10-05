@@ -3,7 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { AdminPortalRoutingModule } from './admin-portal-routing.module';
 import { LayoutComponent } from './layout/layout.component';
-import { SideNavModule, TopNavBarModule } from '@sudarshan-component';
+import {
+  PageHeaderModule,
+  SideNavModule,
+  TopNavBarModule,
+} from '@sudarshan-component';
 
 @NgModule({
   declarations: [LayoutComponent],
@@ -12,6 +16,7 @@ import { SideNavModule, TopNavBarModule } from '@sudarshan-component';
     AdminPortalRoutingModule,
     TopNavBarModule,
     SideNavModule,
+    PageHeaderModule,
   ],
 })
 export class AdminPortalModule {}
