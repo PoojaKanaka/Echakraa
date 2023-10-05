@@ -27,7 +27,7 @@ namespace ModelBuilder.Handlers.Hospital
             var lastentry = _dbContext.HospitalDetails.OrderByDescending(x=>x.HospitalId).Take(1).FirstOrDefault();
             if (hospitalentry == null && lastentry==null) {
 
-                var GUIDnew= Guid.NewGuid();
+              
                 var data = new HospitalDetails {
                     MobileNumber = request.MobileNumber,
                     Address = request.Address,
@@ -39,6 +39,27 @@ namespace ModelBuilder.Handlers.Hospital
                 };
 
                 _dbContext.HospitalDetails.Add(data);
+                _dbContext.SaveChangesAsync();
+                return Task.FromResult(data);
+
+            }
+            if (hospitalentry == null && lastentry != null)
+            {
+
+                
+                var data = new HospitalDetails
+                {
+                    MobileNumber = request.MobileNumber,
+                    Address = request.Address,
+                    //GoogleMapLatandLng = request.GoogleMapLatandLng,
+                    HospitalName = request.HospitalName,
+                    RegistrationNumber = request.RegistrationNumber,
+                    HospitalId = lastentry.HospitalId+1
+
+                };
+
+                _dbContext.HospitalDetails.Add(data);
+                _dbContext.SaveChangesAsync();
                 return Task.FromResult(data);
 
             }
