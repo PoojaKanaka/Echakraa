@@ -5,7 +5,7 @@ import {
   ITopNavBarConfiguration,
   SideNavService,
   TopNavBarService,
-} from 'sudarshan-component';
+} from '@sudarshan-component';
 
 @Component({
   selector: 'app-layout',
@@ -63,6 +63,11 @@ export class LayoutComponent {
         menuName: 'Doctors',
         navigationURL: ['doctor'],
         iconName: 'person_add',
+      },
+      {
+        menuName: 'Logout',
+        navigationURL: ['auth'],
+        iconName: 'logout',
       },
     ];
   }

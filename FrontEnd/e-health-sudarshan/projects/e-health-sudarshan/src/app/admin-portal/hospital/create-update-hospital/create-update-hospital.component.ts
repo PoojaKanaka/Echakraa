@@ -1,5 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
+
+export interface IHospitalFG {
+  hospitalName: FormControl<string>;
+  registrationNumber: FormControl<string>;
+  mobileNumber: FormControl<string>;
+}
 
 @Component({
   selector: 'app-create-update-hospital',
